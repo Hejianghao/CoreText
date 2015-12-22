@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  MicroBlogTableViewCell.h
 //  CoreText
 //
 //  Created by 何江浩 on 15/12/22.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface MicroBlogTableViewCell : UITableViewCell
 
 @end
-
