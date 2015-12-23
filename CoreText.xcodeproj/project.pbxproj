@@ -16,6 +16,7 @@
 		C545278E1C2952B60099AD6E /* CoreTextTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C545278D1C2952B60099AD6E /* CoreTextTests.m */; };
 		C545279A1C29566A0099AD6E /* ListsViewControllerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C54527991C29566A0099AD6E /* ListsViewControllerTableViewController.m */; };
 		C545279D1C29577D0099AD6E /* MicroBlogTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C545279C1C29577D0099AD6E /* MicroBlogTableViewCell.m */; };
+		C55626A01C2AB05600FE9C9A /* comment.txt in Resources */ = {isa = PBXBuildFile; fileRef = C556269F1C2AB05600FE9C9A /* comment.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +46,7 @@
 		C54527991C29566A0099AD6E /* ListsViewControllerTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListsViewControllerTableViewController.m; sourceTree = "<group>"; };
 		C545279B1C29577D0099AD6E /* MicroBlogTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MicroBlogTableViewCell.h; sourceTree = "<group>"; };
 		C545279C1C29577D0099AD6E /* MicroBlogTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MicroBlogTableViewCell.m; sourceTree = "<group>"; };
+		C556269F1C2AB05600FE9C9A /* comment.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = comment.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 		C54527731C2952B60099AD6E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				C556269F1C2AB05600FE9C9A /* comment.txt */,
 				C54527741C2952B60099AD6E /* main.m */,
 			);
 			name = "Supporting Files";
@@ -216,6 +219,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C55626A01C2AB05600FE9C9A /* comment.txt in Resources */,
 				C54527831C2952B60099AD6E /* LaunchScreen.storyboard in Resources */,
 				C54527801C2952B60099AD6E /* Assets.xcassets in Resources */,
 				C545277E1C2952B60099AD6E /* Main.storyboard in Resources */,
