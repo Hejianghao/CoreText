@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8FC4AB641C29A5670027311F /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FC4AB631C29A5670027311F /* CoreText.framework */; };
 		C54527751C2952B60099AD6E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C54527741C2952B60099AD6E /* main.m */; };
 		C54527781C2952B60099AD6E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C54527771C2952B60099AD6E /* AppDelegate.m */; };
 		C545277E1C2952B60099AD6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C545277C1C2952B60099AD6E /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8FC4AB631C29A5670027311F /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		C54527701C2952B60099AD6E /* CoreText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreText.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C54527741C2952B60099AD6E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C54527761C2952B60099AD6E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -50,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8FC4AB641C29A5670027311F /* CoreText.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +69,7 @@
 		C54527671C2952B60099AD6E = {
 			isa = PBXGroup;
 			children = (
+				8FC4AB631C29A5670027311F /* CoreText.framework */,
 				C54527721C2952B60099AD6E /* CoreText */,
 				C545278C1C2952B60099AD6E /* CoreTextTests */,
 				C54527711C2952B60099AD6E /* Products */,
@@ -424,6 +428,7 @@
 				C54527941C2952B70099AD6E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C54527951C2952B70099AD6E /* Build configuration list for PBXNativeTarget "CoreTextTests" */ = {
 			isa = XCConfigurationList;
@@ -432,6 +437,7 @@
 				C54527971C2952B70099AD6E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
