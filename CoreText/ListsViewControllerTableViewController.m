@@ -7,8 +7,11 @@
 //
 
 #import "ListsViewControllerTableViewController.h"
+#import "MicroBlogTableViewCell.h"
 
-@interface ListsViewControllerTableViewController ()
+@interface ListsViewControllerTableViewController (){
+    NSMutableArray *_logs;
+}
 
 @end
 
@@ -43,11 +46,11 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *CellIdentify = @"BasicCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentify forIndexPath:indexPath];
-    NSMutableAttributedString *attributedString = [[NSMutableAttributedString alloc] initWithString:@"Hello world!"];
-    [attributedString addAttribute:NSBackgroundColorAttributeName value:[UIColor redColor] range:NSMakeRange(6, 6)];
-    cell.textLabel.attributedText = attributedString;
+    static NSString *CellIdentify = @"WebLogCell";
+    MicroBlogTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentify];
+    if (!cell) {
+        
+    }
     return cell;
 }
 

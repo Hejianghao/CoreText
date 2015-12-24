@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8FC4AB641C29A5670027311F /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FC4AB631C29A5670027311F /* CoreText.framework */; };
+		C54044231C2BFAC80018DCE4 /* WebLog.m in Sources */ = {isa = PBXBuildFile; fileRef = C54044221C2BFAC80018DCE4 /* WebLog.m */; };
 		C54527751C2952B60099AD6E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C54527741C2952B60099AD6E /* main.m */; };
 		C54527781C2952B60099AD6E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C54527771C2952B60099AD6E /* AppDelegate.m */; };
 		C545277E1C2952B60099AD6E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C545277C1C2952B60099AD6E /* Main.storyboard */; };
@@ -31,6 +32,8 @@
 
 /* Begin PBXFileReference section */
 		8FC4AB631C29A5670027311F /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		C54044211C2BFAC80018DCE4 /* WebLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebLog.h; sourceTree = "<group>"; };
+		C54044221C2BFAC80018DCE4 /* WebLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebLog.m; sourceTree = "<group>"; };
 		C54527701C2952B60099AD6E /* CoreText.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreText.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C54527741C2952B60099AD6E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		C54527761C2952B60099AD6E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -68,6 +71,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C54044201C2BFA5F0018DCE4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C54044211C2BFAC80018DCE4 /* WebLog.h */,
+				C54044221C2BFAC80018DCE4 /* WebLog.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		C54527671C2952B60099AD6E = {
 			isa = PBXGroup;
 			children = (
@@ -90,7 +102,8 @@
 		C54527721C2952B60099AD6E /* CoreText */ = {
 			isa = PBXGroup;
 			children = (
-				C545279F1C2957980099AD6E /* Views */,
+				C54044201C2BFA5F0018DCE4 /* Models */,
+				C545279F1C2957980099AD6E /* Cells */,
 				C545279E1C29578D0099AD6E /* ViewControllers */,
 				C54527761C2952B60099AD6E /* AppDelegate.h */,
 				C54527771C2952B60099AD6E /* AppDelegate.m */,
@@ -130,13 +143,13 @@
 			name = ViewControllers;
 			sourceTree = "<group>";
 		};
-		C545279F1C2957980099AD6E /* Views */ = {
+		C545279F1C2957980099AD6E /* Cells */ = {
 			isa = PBXGroup;
 			children = (
 				C545279B1C29577D0099AD6E /* MicroBlogTableViewCell.h */,
 				C545279C1C29577D0099AD6E /* MicroBlogTableViewCell.m */,
 			);
-			name = Views;
+			name = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -241,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C545279D1C29577D0099AD6E /* MicroBlogTableViewCell.m in Sources */,
+				C54044231C2BFAC80018DCE4 /* WebLog.m in Sources */,
 				C54527781C2952B60099AD6E /* AppDelegate.m in Sources */,
 				C545279A1C29566A0099AD6E /* ListsViewControllerTableViewController.m in Sources */,
 				C54527751C2952B60099AD6E /* main.m in Sources */,
