@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+@class WebLog;
 @interface MicroBlogTableViewCell : UITableViewCell
 
-
+- (instancetype) initWithWebLog:(WebLog *)webLog reuseIdentifier:(NSString *)reuseIdentifier;
 
 @end

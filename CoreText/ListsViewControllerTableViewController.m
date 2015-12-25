@@ -8,6 +8,7 @@
 
 #import "ListsViewControllerTableViewController.h"
 #import "MicroBlogTableViewCell.h"
+#import "WebLog.h"
 
 @interface ListsViewControllerTableViewController (){
     NSMutableArray *_logs;
@@ -19,6 +20,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    //初始化数据
+    NSError *err;
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:@"array" ofType:@"txt"];
+    NSString *arrStr = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:&err];
+    NSLog(@"array:%@",arrStr);
+
+    NSError *error;
+    NSArray *dataSource = [NSJSONSerialization JSONObjectWithData:[arrStr dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:&error];
+    _logs = [[NSMutableArray alloc] initWithArray:dataSource];
+    
+    
+    for (NSDictionary *dic in dataSource) {
+        WebLog *webLog = [[WebLog alloc] initWithDictionary:dic];
+        [_logs addObject:webLog];
+    }
+    
+    
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -46,9 +65,11 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
     static NSString *CellIdentify = @"WebLogCell";
     MicroBlogTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentify];
     if (!cell) {
+        cell = [[MicroBlogTableViewCell alloc] initWithWebLog:[WebLog new] reuseIdentifier:CellIdentify];
         
     }
     return cell;
