@@ -10,6 +10,7 @@
 #import "MicroBlogTableViewCell.h"
 #import "WebLog.h"
 
+
 @interface ListsViewControllerTableViewController (){
     NSMutableArray *_logs;
 }
@@ -25,11 +26,11 @@
     NSError *err;
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"array" ofType:@"txt"];
     NSString *arrStr = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:&err];
-    NSLog(@"array:%@",arrStr);
+    debugLog(@"array:%@",arrStr);
 
     NSError *error;
     NSArray *dataSource = [NSJSONSerialization JSONObjectWithData:[arrStr dataUsingEncoding:NSUTF8StringEncoding] options:NSJSONReadingMutableContainers error:&error];
-    _logs = [[NSMutableArray alloc] initWithArray:dataSource];
+    _logs = [[NSMutableArray alloc] init];
     
     
     for (NSDictionary *dic in dataSource) {
@@ -60,7 +61,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    return 1;
+    return _logs.count;
 }
 
 
@@ -68,11 +69,17 @@
     
     static NSString *CellIdentify = @"WebLogCell";
     MicroBlogTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentify];
+    NSInteger index = indexPath.row;
     if (!cell) {
-        cell = [[MicroBlogTableViewCell alloc] initWithWebLog:[WebLog new] reuseIdentifier:CellIdentify];
+        WebLog *weblog = _logs[index];
+        cell = [[MicroBlogTableViewCell alloc] initWithWebLog:weblog reuseIdentifier:CellIdentify];
         
     }
     return cell;
+}
+
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return 200.f;
 }
 
 

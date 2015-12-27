@@ -8,6 +8,7 @@
 
 #import "MicroBlogTableViewCell.h"
 #import "WebLog.h"
+#import "RichTextView.h"
 
 @interface MicroBlogTableViewCell (){
     UIImageView *avatarImageView;
@@ -34,7 +35,10 @@
 - (instancetype) initWithWebLog:(WebLog *)webLog reuseIdentifier:(NSString *)reuseIdentifier {
     self = [super initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseIdentifier];
     if (self) {
-        
+        //self.textLabel.text = webLog.momentsText;
+        RichTextView *textView = [[RichTextView alloc] initWithFrame:CGRectMake(0, 10, [[UIScreen mainScreen] bounds].size.width, 200)];
+        textView.backgroundColor = [UIColor clearColor];
+        [self addSubview:textView];
     }
     return self;
 }

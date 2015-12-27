@@ -14,7 +14,7 @@
     self = [super init];
     if (self) {
         self.nickname = [dic objectForKey:@"nickname"];
-        self.userId = [dic objectForKey:@"userId"];
+        self.userId   = [dic objectForKey:@"userId"];
     }
     return self;
 }
